@@ -1,0 +1,22 @@
+.card-top {
+  border-radius: 0px;
+  .head-conyent {
+    margin: -10px;
+    .icon {
+      color: grey;
+      height: 14px;
+    }
+    .text {
+      font-size: 15px;
+    }
+  }
+}
+.card-success {
+  border-top: 3px #67c23a solid;
+}
+.card-dealwith {
+  border-top: 3px rgba(103, 194, 58, 0.6) solid;
+}
+.card-primary {
+  border-top: 3px #409eff solid;
+}

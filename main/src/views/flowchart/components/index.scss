@@ -1,0 +1,208 @@
+$nodeMenuW: 150px;
+$nodeMenuH: 60px;
+
+.page {
+  width: 100%;
+  height: calc(100vh);
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh);
+  overflow: hidden;
+  .side-left {
+    width: 230px;
+    border-right: 1px solid #dce3e8;
+  }
+  .content {
+    overflow: hidden;
+    flex: 1;
+    cursor: grab;
+  }
+  .side-right {
+    width: 300px;
+    border-left: 1px solid #dce3e8;
+    background-color: #FBFBFB;
+  }
+}
+.container {
+    width: 0;
+    height: 0;
+}
+
+/deep/ .ef-node-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  // padding: 0 8px 0 16px;
+  padding-left: 8px;
+  width: $nodeMenuW;
+  height: $nodeMenuH;
+  margin: 1px;
+  border: 1px solid #E0E3E7;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+  &:hover {
+    cursor: move;
+    background-color: #F0F7FF;
+    border: 2px dashed #1879FF;
+  }
+
+  // .ef-node-left-ico {
+  //   width: 16px;
+  // }
+
+  // .ef-node-left-ico:hover {
+  //   cursor: crosshair;
+  // }
+
+  .ef-node-text {
+    flex: 1;
+    color: #565758;
+    position: relative;
+    z-index: 3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
+
+.jtk-overlay {
+    cursor: pointer;
+    color: #4A4A4A;
+}
+
+/deep/ .flow-menu {
+
+}
+/deep/ .menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/deep/ .ef-node-menu {
+  color: #565758;
+  width: $nodeMenuW;
+  height: $nodeMenuH;
+  border: 1px solid #E0E3E7;
+  margin: 5px 0;
+  padding: 0 8px 0 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  &:hover {
+    cursor: move;
+    background-color: #F0F7FF;
+    border: 1px dashed #1879FF;
+  }
+}
+
+/deep/ .ef-mode-start {
+  border-radius: 30px;
+}
+/deep/ .ef-mode-diamond {
+  border-radius: 0px;
+  border-width: 0!important;
+  height: 96px;
+  padding-left: 32px;
+  overflow: hidden;
+  // .ef-node-right-ico {
+  //   right: 24px;
+  // }
+  .diamond {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    stroke: #ccc;
+    stroke-width: 1px;
+    fill: #fff;
+  }
+  &:hover {
+    background-color: #FFF;
+    .diamond {
+      stroke-dasharray: 5, 5;
+      fill: #F0F7FF;
+      stroke: #1879FF;
+      stroke-width: 2px;
+    }
+  }
+}
+
+/deep/ .ef-node-right-ico {
+  position: relative;
+  // width: 16px;
+  // height: 16px;
+  z-index: 3;
+  // top: 50%;
+  // transform: translate(0, -8px);
+  // right: 16px;
+  color: #84CF65;
+  cursor: default;
+  flex: 0 0 24px;
+}
+
+.ef-node-active {
+    background-color: #F0F7FF;
+    border: 1px solid #1879FF;
+}
+
+/deep/ .flowLabel:not(.aLabel) {
+    padding: 4px 10px;
+    background-color: white;
+    color: #565758 !important;
+    border: 1px solid #E0E3E7;
+    border-radius: 5px;
+    z-index: 11;
+    white-space: nowrap;
+}
+
+.emptyFlowLabel {
+}
+
+
+.ef-dot {
+    background-color: #1879FF;
+    border-radius: 10px;
+}
+
+.ef-dot-hover {
+    background-color: red;
+}
+
+.ef-rectangle {
+    background-color: #1879FF;
+}
+
+.ef-rectangle-hover {
+    background-color: red;
+}
+
+.ef-img {
+}
+
+.ef-img-hover {
+}
+
+.ef-drop-hover{
+    border: 1px dashed #1879FF;
+}
+
+/deep/ .jtk-endpoint {
+  z-index: 9;
+  cursor: default;
+  &:hover {
+    circle {
+      fill: #7AB02C;
+    }
+  }
+}
